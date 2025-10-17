@@ -12,6 +12,7 @@ const server = http.createServer(app);
 
 // Node-RED settings
 const settings = {
+  userDir: "./.nodered/",
   adminAuth: {
     type: "credentials",
     users: [{
