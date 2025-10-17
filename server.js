@@ -28,7 +28,6 @@ RED.init(server, settings);
 
 // Start the server
 server.listen(port);
-});
 
 // Start Node-RED runtime
 RED.start();
