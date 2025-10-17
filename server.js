@@ -12,7 +12,10 @@ const server = http.createServer(app);
 
 // Node-RED settings
 const settings = {
+  httpAdminRoot: "/",
+  httpNodeRoot: "/",
   userDir: "./.nodered/",
+  functionGlobalContext: {},
   adminAuth: {
     type: "credentials",
     users: [{
@@ -26,6 +29,12 @@ const settings = {
 
 // Initialize Node-RED
 RED.init(server, settings);
+
+// Serve the editor UI from /admin
+app.use(settings.httpAdminRoot, RED.httpAdmin);
+ 
+// Serve the HTTP nodes UI from /api
+app.use(settings.httpNodeRoot, RED.httpNode);
 
 // Start the server
 server.listen(port);
