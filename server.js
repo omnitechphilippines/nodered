@@ -27,8 +27,7 @@ const settings = {
 RED.init(server, settings);
 
 // Start the server
-server.listen(port, () => {
-  console.log(`Node-RED running on port ${port}`);
+server.listen(port);
 });
 
 // Start Node-RED runtime
