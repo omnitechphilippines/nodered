@@ -1,7 +1,7 @@
-const http = require("http");
-const RED = require("node-red");
+import http from "http";
+import RED from "node-red";
 
-const express = require("express");
+import express from "express";
 const app = express();
 
 // Render provides the port via environment variable
