@@ -21,15 +21,7 @@ const settings = {
   // ✅ PostgreSQL storage for persistence
   storageModule: pgStorage,
   postgresURI: process.env.POSTGRES_URI,
-  storageModuleOptions: {
-    user: process.env.DB_POSTGRESDB_USER,
-    password: process.env.DB_POSTGRESDB_PASSWORD,
-    host: process.env.DB_POSTGRESDB_HOST,
-    port: process.env.DB_POSTGRESDB_PORT,
-    database: process.env.DB_POSTGRESDB_DATABASE,
-    schema: process.env.DB_POSTGRESDB_SCHEMA || "public",
-    ssl: true, // important for Render or Supabase
-  },
+  postgresSchema: process.env.POSTGRES_SCHEMA,
 
   // ✅ Optional admin UI credentials
   adminAuth: {
