@@ -20,6 +20,7 @@ const settings = {
 
   // ✅ PostgreSQL storage for persistence
   storageModule: pgStorage,
+  postgresURI: process.env.POSTGRES_URI,
   storageModuleOptions: {
     user: process.env.DB_POSTGRESDB_USER,
     password: process.env.DB_POSTGRESDB_PASSWORD,
