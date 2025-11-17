@@ -14,7 +14,7 @@ const server = http.createServer(app);
 // ✅ Node-RED settings
 const settings = {
   httpAdminRoot: "/",
-  httpNodeRoot: "/",
+  httpNodeRoot: "/api",
   userDir: "./.nodered/",
   functionGlobalContext: {},
 
